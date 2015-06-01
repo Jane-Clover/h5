@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=320,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta name="format-detection" content="telephone=no">  <!--自动检测在网页中可能出现的电话号码-->
+    <title>司机加盟</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/greencar-reg.css"/>
+    <script type="text/javascript" src="http://i3.yongche.name/js/do/do.all.js"></script>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>上传认证照片</h1>
+    </header>
+    <article>
+        <section class="content">
+            <ul class="upload-list">
+                <li>
+                    <div class="upload-title">
+                        <h2>驾驶证照片</h2>
+                        <input id="btn_driver" class="btn btn-invisible btn-xs gray" type="button" value="查看范例"/>
+                    </div>
+                    <div class="upload-area">
+                        <div><img class="scale-6" src="img/upload.png" alt="上传照片"/></div>
+                        <input id="add" class="btn btn-invisible btn-xs gray" type="button" value="点击添加"/>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="upload-title">
+                        <h2>行驶证照片</h2>
+                        <input id="btn_drive" class="btn btn-invisible btn-xs gray" type="button" value="查看范例"/>
+                    </div>
+                    <div class="upload-area">
+                        <div><img class="scale-6" src="img/upload.png" alt="上传照片"/></div>
+                        <input class="btn btn-invisible btn-xs gray" type="button" value="点击添加"/>
+                        <div class="reupload"><img class="scale-6" src="img/edit.png" alt="重新上传"/>替换照片</div>
+                    </div>
+                </li>
+
+
+            </ul>
+        </section>
+        <div class="btn-container">
+            <input class="btn btn-red btn-large" type="button" value="提交审核"/>
+        </div>
+
+    </article>
+
+    <div class="window-container"  id="ex_driver">
+        <div class="window-header">
+            <a title="关闭" href="javascript:;" class="popdiv_close _close close">X</a>
+        </div>
+        <div class="t-center">
+            <img class="window-img" src="img/ex1.png" alt=""/>
+        </div>
+    </div>
+
+    <div class="window-container"  id="ex_drive">
+        <div class="window-header">
+            <a title="关闭" href="javascript:;" class="popdiv_close _close close">X</a>
+        </div>
+        <div class="t-center">
+            <img class="window-img" src="img/ex2.png" alt=""/>
+        </div>
+    </div>
+</div>
+<script>
+    Do("c.common", function() {
+        $('#btn_driver').click(function(){
+            YCUtils.alert("#ex_driver");
+        });
+
+        $('#btn_drive').click(function(){
+            YCUtils.alert("#ex_drive");
+        });
+
+    });
+</script>
+</body>
+</html>

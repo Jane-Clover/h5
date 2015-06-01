@@ -1,0 +1,155 @@
+/**
+ * help classes and reset classes
+ * 易到用车
+ * www.yongche.com
+ */
+
+
+/*---------------------------------------------------------------------
+ *---------------------------------------------------------------------
+ * Reset Classes
+ *---------------------------------------------------------------------
+ *----------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------
+ *---------------------------------------------------------------------
+ * Gerneral Classes
+ *---------------------------------------------------------------------
+ *----------------------------------------------------------------------*/
+
+/* About position */
+.root { position: relative; }
+.absolute { position: absolute; }
+
+/* About display */
+.show { display: block !important; }
+.hide { display: none !important; }
+.invisible { visibility: hidden; }
+.text-hidden { text-indent: -9999px; }
+
+/* About margin */
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* About Typographic */
+.t-center { text-align: center; }
+.t-left { text-align: left; }
+.t-right { text-align: right; }
+
+.v-top { vertical-align: top; }
+.v-middle { vertical-align: middle; }
+.v-bottom { vertical-align: bottom; }
+
+.bold { font-weight: bold; }
+
+/* 不换行 */
+.nowrap { white-space: nowrap; }
+/* 自动换行 */
+.wrap-auto {
+    word-wrap: break-word;
+    word-break: normal;
+}
+/* 英文单词强制换行 */
+.wrap-force { word-break: break-all; }
+
+/* 超出部分省略号显示，但是需要把父容器设置宽度 */
+.text-ellipsis {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* About float */
+.pull-left { float: left !important; }
+.pull-right { float: right !important; }
+.clearfix { *zoom: 1; }
+.clearfix:after {
+    display: block;
+    height: 0;
+    content: ".";
+    visibility: hidden;
+    clear: both;
+}
+
+/* About pointer */
+.pointer { cursor: pointer; }
+
+/* About decoration */
+.underline { text-decoration: underline; }
+.underline-none { text-decoration: none; }
+
+/* About color */
+.white { color: #fff; }
+.red { color: #f27168; }
+.blue { color: #428bcd; }
+.black { color: #000000; }
+
+/* About box model */
+.no-resize { resize: none; }
+
+/* About display: box */
+.h100 { height: 100%; }
+.dis-box {
+    display: -webkit-box;
+    display: box;
+}
+.box-vertical {
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+.flex {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+}
+
+.align-start {
+    -webkit-box-align: start;
+    box-align: start;
+}
+.align-center {
+    -webkit-box-align: center;
+    box-align: center;
+}
+.align-end {
+    -webkit-box-align: end;
+    box-align: end;
+}
+
+.pack-start {
+    -webkit-box-pack: start;
+    box-pack: start;
+}
+.pack-center {
+    -webkit-box-pack: center;
+    box-pack: center;
+}
+.pack-end {
+    -webkit-box-pack: end;
+    box-pack: end;
+}
+.pack-justify {
+    -webkit-box-pack: justify;
+    box-pack: justify;
+}
+
+/*About scale*/
+.scale-7 {
+    -webkit-transform: scale(.7);
+    transform: scale(.7);
+}
+
+.scale-6 {
+    -webkit-transform: scale(.6);
+    transform: scale(.6);
+}
+
+.scale-5 {
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+}
+

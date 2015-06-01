@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=320,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta name="format-detection" content="telephone=no">  <!--自动检测在网页中可能出现的电话号码-->
+    <title>易到出行日记</title>
+    <link rel="stylesheet" type="text/css" href="http://i1.dujingjie.yongche.org/css/app/wap/common.css"/>
+    <link rel="stylesheet" href="swiper3.07.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <style>
+        .date-container span{float: left;display: block;overflow: hidden;}
+        .date-container span:last-child{margin-left: 15px;}
+        .box li{height: 108px;line-height: 108px; list-style: none}
+    </style>
+</head>
+<body>
+<article id="scroll">
+    <!-- <section class="root">
+        <div class="container w145 loading">
+            <img src="img/diary-img.png" alt="我的易到出行日记"/>
+            <p class="mt40">63%</p>
+        </div>
+
+    </section> -->
+
+    <section id="cover" class="bg-onecloud">
+        <div class="identity">
+            <img class="user-avatar" src="img/avatar.png" alt=""/>
+            <p>我是<span>德普</span></p>
+        </div>
+        
+        <div class="container w170 mb55">
+            <img id="diary" class="invisible" src="img/diary-txt.png" alt="我的易到出行日记"/>
+        </div>
+
+        <div class="container w145">
+            <img class="require-fade" src="img/diary-img.png" alt="我的易到出行日记"/>
+        </div>
+    </section>
+
+    <section id="reg_time">
+
+        <div class="clock-container">
+            <div class="clock  container">
+                <div class="hour-hand"></div>
+                <div class="minute-hand"></div>
+                <div class="seconds-hand"></div>
+                <div class="center"></div>
+            </div>
+        </div>
+
+        <div class="container w240">
+            <img  class="invisible" id="reg_txt" src="img/reg-txt.png" alt="那一天，我邂逅易到；那一天，开启美妙旅程"/>
+        </div>
+
+        <div class="date-container container" time="">
+            <span id="year"  class="box">
+                <ul>
+                </ul>
+            </span>
+            <span id="month"  class="box">
+                <ul>
+                </ul>
+            </span>
+            <span id="date"  class="box">
+                <ul>
+                </ul>
+            </span>
+        </div>
+    </section>
+
+    <section id="first_order" class="root">
+        <div class="order-top container">
+            <img class="invisible" id="order_img" src="img/order-1.png" alt="从此，早上可以多睡几分钟"/>
+        </div>
+        <div class="height-fix">
+            <div id="order" class="order-container container">
+                <div class="container-top">
+                    <span class="pull-left first_car_name">马自达6（黑）</span>
+                    <span class="pull-right">2012年12月30日</span>
+                </div>
+                <div>
+                    <div class="order-route">
+                        <p class="line-start">中关村技术交易大厦<span class="line-title">从：</span></p>
+                        <p class="line-end"><span class="line-title">到：</span>北京市</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <span class="delay"><i>59</i>分钟</span>
+                    <span><i>33</i>公里</span>
+                </div>
+
+                <div class="map">
+                    <img src="img/map.png" alt="订单地图"/>
+                </div>
+
+                <div class="cost text-center">
+                    <i>152</i>元
+                </div>
+
+                <div class="container-footer"></div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <section id="flight" class="bg-onecloud root">
+        <div class="plane-container container">
+            <div id="plane_go" class="w400 left hidden">
+                <img src="img/plane.png" alt="送机"/>
+            </div>
+
+
+            <div id="plane_back" class="w400 flyright invisible">
+                <img src="img/plane-back.png" alt="接机"/>
+            </div>
+
+        </div>
+
+        <div class="flight-content container">
+            <table>
+                <tr>
+                    <td>
+                        <div class="w206 container hidden">
+                            <img id="flight_go" class="invisible" src="img/flight.png" alt="第一次坐着易到去机场，这一次乘机，不再像以往那样匆忙"/>
+                        </div>
+                        <div class="w206 container">
+                            <img id="flight_back" class="invisible" src="img/flightback-txt.png" alt="第一次下了飞机，就坐上易到，从此再没排过队"/>
+                        </div>
+                    </td>
+                    <td valign="top">
+                        <div class="location-time clearfix">
+                            <p class="pull-right">二零一四年十一月三十日</p>
+                            <p class="pull-right"><span class="mb25 inline-block">早上</span>首都机场</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div class="baggage-container">
+            <div id="baggage" class="baggage w116 container bottom hidden">
+                <img src="img/baggage.png" alt="行李箱"/>
+            </div>
+
+            <div id="back_car" class=" w300 container invisible flyright">
+                <img src="img/flightback-car.png" alt="易到专车"/>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="outside" class="bg-bird root">
+        <div class="outsidetxt-container container">
+            <div class="w193 container">
+                <img id="outside_txt" class="invisible" src="img/outside-txt.png" alt=""/>
+            </div>
+        </div>
+
+        <div class="car-container container root">
+            <img id="car" class="scale-car" src="img/car.png" alt="异地，易到用车"/>
+        </div>
+    </section>
+
+    <section id="distance" class="bg-moon">
+        <div class="container total-container">
+            <table>
+                <tr>
+                    <td>
+                        <div class="rocket-container">
+                            <div id="rocket-shelter" class="rocket-shelter"><div id="rocket" class="rocket"></div></div>
+                            <div id="rocket-line" class="rocket-line">
+                                <img style="height:100%;width:auto;" src="img/rocket-line.png" alt="火箭发射轨迹"/>
+                                <div class="begin-date begin-date-top">
+                                    <p class="distance"><span id="journey"></span>km</p>
+                                    <p>行驶里程</p>
+                                </div>
+                                <div class="begin-date begin-date-bottom">
+                                    <p class="distance" id="time"></p>
+                                    <p>起航</p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="distance-container">
+                            <div id="distance_txt" class="w240 container root invisible">
+                                <img src="img/distance-txt.png" alt="我的行程"/>
+                                <i class="num num-delay">632</i>
+                                <i class="num num-distance">4956</i>
+                                <i class="num num-year">92</i>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="car_brand" class="bg-onecloud root">
+        <div class="container">
+            <div class="container invisible" id="car_count">
+                <img id="car_brand_img" class="" src="img/car-brand-txt.png" alt=""/>
+                <span>72</span>
+            </div>
+        </div>
+        <div class="container">
+            <img src="img/car-bg.png" alt="" class="mt90">
+            <p class="remian">还有<span>731</span>款车型等待我去体验</p>
+        </div>
+    </section>
+
+    <section id="collect" class="root">
+        <div class="container">
+            <div class="container invisible mt80" id="collect_txt">
+                <img id="collect_txt_img" class="" src="img/collect-1.png" alt=""/>
+                <span class="driver-name">王师傅</span>
+                <span class="collect-count">362</span>
+            </div>
+        </div>
+        <div class="collect-card-wrap">
+            <div id="collect-card" class="container bottom ">
+                <p class="title">我收藏了<span>32</span>名司机</p>
+                <div class="driver-info">
+                    <ul>
+                        <li>
+                            <img src="img/avatar.png" alt="" class="driver-icon">
+                        </li>
+                        <li>
+                            <p class="d-name">王师傅</p>
+                            <p class="s-count"><span>346</span>次服务</p>
+                        </li>
+                        <li>
+                            <p class="c-count">188人收藏</p>
+                            <p class="d-years"><span>32</span>年驾龄</p>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="user_level" class="root">
+        <div class="container">
+            <div class="w259 container invisible" id="level_txt">
+                <img id="level_txt_img" class="" src="img/level-txt.png" alt=""/>
+                <span>钻石卡</span>
+            </div>
+        </div>
+        <div class="level-wrap">
+            <div id="level-con" class="container bottom ">
+                <div class="level-top">
+                    <img src="img/avatar.png" alt="" class="user-icon">
+                    <span>—我是德普</span>
+                </div>
+                <div class="level-mid">
+                    <p class="level-name">白金卡</p>
+                    <p class="level-name-en">PLATINUM CARD</p>
+                    <!-- <p class="level-points">已达到最高等级</p> -->
+                    <!-- <p class="level-points">再积<span id="zaiji_num"></span>即可升级为<span id="what_card"></span></p> -->
+                </div>
+                <div class="level-bottom">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+
+                        </div>
+                        <div class="swiper-pagination">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="share" class="bg-onecloud">
+        <div class="container w80 mt50">
+            <img  class="invisible" id="share_txt" src="img/share-txt.png" alt="制作您的易到出行日记"/>
+        </div>
+        <div class="container w400">
+            <img  src="img/desk.png" alt=""/>
+        </div>
+        <div class="join-wrap">
+            <div class="container w500 join bottom" id="join">
+                <img src="img/s-logo.png" alt="" class="s-logo">
+                <form action="" class="join-form">
+                    <div class="phone_input">
+                        <input type="tel" name="cellphone" id="cellphone" placeholder="输入您的手机号">
+                    </div>
+                    <a href="javascript:void(0)" class="button" id="submit_btn">查看您的出行日记</a>
+                </form>
+            </div>
+        </div>
+            
+    </section>
+
+    
+</article>
+<section id="final" class="bg-share root">
+    <div id="share_old" class="w116 invisible container mt-50">
+        <img src="img/share-old.png" alt="分享给好友并查看"/>
+    </div>
+
+    <div id="share_new" class="w228 invisible container mt-50">
+        <img src="img/share-new.png" alt="制作属于您的出行日记"/>
+    </div>
+</section>
+<div id="imageLoader" style="position:relative;top:-1px">
+    <img loadsrc="img/avatar.png" src="" alt="" />
+    <img loadsrc="img/baggage.png" src="" alt="" />
+    <img loadsrc="img/bg-bird.png" src="" alt="" />
+    <img loadsrc="img/bg-cloud.png" src="" alt="" />
+    <img loadsrc="img/bg-gray.png" src="" alt="" />
+    <img loadsrc="img/bg-moon.png" src="" alt="" />
+    <img loadsrc="img/bg-share.png" src="" alt="" />
+    <img loadsrc="img/car.png" src="" alt="" />
+    <img loadsrc="img/car-bg.png" src="" alt="" />
+    <img loadsrc="img/car-brand-txt.png" src="" alt="" />
+    <img loadsrc="img/city.png" src="" alt="" />
+    <img loadsrc="img/clock.png" src="" alt="" />
+    <img loadsrc="img/collect_card.png" src="" alt="" />
+    <img loadsrc="img/collect-1.png" src="" alt="" />
+    <img loadsrc="img/collect-2.png" src="" alt="" />
+    <img loadsrc="img/date.png" src="" alt="" />
+    <img loadsrc="img/desk.png" src="" alt="" />
+    <img loadsrc="img/diary-img.png" src="" alt="" />
+    <img loadsrc="img/diary-txt.png" src="" alt="" />
+    <img loadsrc="img/distance-txt.png" src="" alt="" />
+    <img loadsrc="img/flight.png" src="" alt="" />
+    <img loadsrc="img/flightback-car.png" src="" alt="" />
+    <img loadsrc="img/flightback-txt.png" src="" alt="" />
+    <img loadsrc="img/level-txt.png" src="" alt="" />
+    <img loadsrc="img/like.png" src="" alt="" />
+    <img loadsrc="img/map.png" src="" alt="" />
+    <img loadsrc="img/order-1.png" src="" alt="" />
+    <img loadsrc="img/order-2.png" src="" alt="" />
+    <img loadsrc="img/order-3.png" src="" alt="" />
+    <img loadsrc="img/outside-txt.png" src="" alt="" />
+    <img loadsrc="img/plane.png" src="" alt="" />
+    <img loadsrc="img/plane-back.png" src="" alt="" />
+    <img loadsrc="img/points-bg.png" src="" alt="" />
+    <img loadsrc="img/reg-txt.png" src="" alt="" />
+    <img loadsrc="img/rocket.png" src="" alt="" />
+    <img loadsrc="img/rocket-line.png" src="" alt="" />
+    <img loadsrc="img/rocket-small.png" src="" alt="" />
+    <img loadsrc="img/share-new.png" src="" alt="" />
+    <img loadsrc="img/share-old.png" src="" alt="" />
+    <img loadsrc="img/share-txt.png" src="" alt="" />
+    <img loadsrc="img/s-logo.png" src="" alt="" />
+</div>
+<div id="loading">
+    <div class="container w145 loading">
+        <img src="img/diary-img.png" alt="我的易到出行日记"/>
+        <div>Loading...</div>
+        <div id="load-percent" class="mt40">0%</div>
+    </div>
+</div>
+<script src="http://i1.dujingjie.yongche.org/js/do/do.all.js"></script>
+<script src="http://i1.dujingjie.yongche.org/js/app/wx/viewport.js"></script>
+<script src="http://apps.bdimg.com/libs/moment/2.8.3/moment.js"></script>
+<script src="swiper3.07.min.js"></script>
+<script src="imageloader.js"></script>
+
+<script>
+    Do(function(){
+                    
+        imageLoader({
+            'selector': '#imageLoader',
+            'callback': init,
+            'progress': function(percent) {
+                $('#load-percent').text(percent);
+            }
+        });
+        function init() {
+            $("#loading").animate({
+                top: "-100%"
+            },500);
+        }
+        $("section").css('height', $(window).height());
+        //阿拉伯数字转换成中文大写数字
+        String.prototype.replaceNum = function (){
+            var arr = new Array("零","一","二","三","四","五","六","七","八","九"); 
+            return this.replace(/\d/g,function(m){return arr[m];}) 
+            
+        };
+
+        //两位数日期转换
+        String.prototype.doubleDate = function (){
+            if(this < 10){
+                return this.replaceNum();
+            }else if(this == 10){
+                return "十";
+            }else {
+                return this.replaceNum().split("")[0] + "十" + this.replaceNum().split("")[1];
+            }
+        }
+        
+        //时间转换脚本确定早上,白天还是晚上
+        moment.locale('zh-cn', {
+                    meridiem : function (hour, minute, isLowercase) {
+                        if (hour > 4 && hour <= 10) {
+                            return "早上";
+                        } else if (hour > 10 && hour <= 17) {
+                            return "白天";
+                        } else {
+                            return "晚上";
+                        }
+                    }
+                });
+        // console.log("10".doubleDate());
+        //页面数据初始化
+       $.getJSON('/touch/ajax/get_user_travel_list.php', {time: 'aegs66xbpk3304k4',id:'itw60245ko4sk8kc'}, function(data) {
+            var  result = data.ret_data;
+            if(data.ret_code == 200){
+                //显示名字--第一屏
+                $(".user-avatar").attr("src",result.head_image);
+                $(".identity p span").html(result.name);
+
+                //时间显示--第二屏
+                $(".date-container").attr("time",moment((result.user_create_time)*1000).format("YYYY-MM-DD"));
+                //第一单--第三屏
+                var first = result.first_travel;
+                var dayCategory = moment((result.first_travel.first_order.order_time)*1000).format("YYYY年MM月DD日 HH:mm a").split(" ")[2];
+                switch(dayCategory){
+                    case "早上":
+                        $("#order_img").attr("src","img/order-1.png")
+                        break;
+                    case "白天":
+                        $("#order_img").attr("src","img/order-2.png")
+                        break;
+                    case "晚上":
+                        $("#order_img").attr("src","img/order-3.png")
+                        break;
+                    default:
+                        $("#order_img").attr("src","img/order-1.png")
+                        break;
+                }
+                // console.log(moment(result.first_travel.first_airport_order.time).format("YYYY年MM月DD日 HH:mm a"));
+                $("#order .pull-left").html(result.first_travel.first_order.car_brand);
+                $("#order .pull-right").html(moment((result.first_travel.first_order.order_time)*1000).format("YYYY年MM月DD日"));
+                $("#order .line-start").html(result.first_travel.first_order.start_position + "<span class=\"line-title\">从：</span>");
+                $("#order .line-end").html("<span class=\"line-title\">到：</span>" + result.first_travel.first_order.end_position);
+                $("#order .info i").eq(0).html(parseInt(result.first_travel.first_order.cost_time)).end().eq(1).html(result.first_travel.first_order.total_distance);
+                $("#order .cost i").eq(0).html(result.first_travel.first_order.pay_amount);
+                //第一单接送机--第四屏
+                var airTime = result.first_travel.first_airport_order.time.split(" ")[0];
+                var fYear = parseInt(airTime.split("-")[0]).toString();
+                var fMonth = parseInt(airTime.split("-")[1]).toString();
+                var fDay = parseInt(airTime.split("-")[2]).toString();
+                $("#flight .pull-right").eq(0).html(fYear.replaceNum() + "年" + fMonth.doubleDate() + "月" + fDay.doubleDate() +"日");
+                $("#flight .pull-right").eq(1).html("<span class=\"mb25\">"+ moment(result.first_travel.first_airport_order.time).format("YYYY年MM月DD日 HH:mm a").split(" ")[2] + "</span>"+result.first_travel.first_airport_order.airport);
+                $(".plane-container").attr("stauts",result.first_travel.first_airport_order.type)
+                //异地--第五屏
+                if(result.citys == 0){
+                    $("#outside").remove();
+                }else{
+                    for (var i = 0; i < result.citys.length; i++) {
+                        $(".car-container").append('<div class="city"><span class="city-img"><img src="img/city.png" alt="'+ result.citys[i] +'"/></span>'+ result.citys[i] +'</div>')
+                    };
+                }
+
+                // 距离月球
+                // var km = result.total_km;
+                // var moon = result.remain_day_to_moon;
+                // var hours = result.total_hours;
+                
+                $("#distance_txt .num-delay").html(result.total_hours);
+                $("#distance_txt .num-distance").html(result.total_km);
+                $("#distance_txt .num-year").html(result.remain_day_to_moon);
+                $("#journey").html(result.total_km);
+
+                //坐过的车型
+
+                $("#car_count span").html(result.car_brand_info.count);
+                $("#car_brand .remian").html(result.car_brand_info.desc);
+
+                //收藏司机
+                if(result.collect_info.over_fifty){
+
+                }else{
+                    $("#collect_txt_img").attr("src","img/collect-2.png");
+                    $("#collect_txt span.collect-count").hide();
+                    $("#collect_txt span.driver-name").css({
+                        'top': 236,
+                        'left':90
+                    });
+                }
+                $("#collect_txt span.collect-count").html(result.collect_info.collect_times);
+                $("#collect_txt span.driver-name").html(result.collect_info.dirver_name + "师傅");
+                $("#collect-card .title span").html(result.collect_info.collect_drivers);
+                $("#collect-card .driver-info .driver-icon").html(result.collect_info.dirver_photo);
+                $("#collect-card .driver-info .d-name").html(result.collect_info.dirver_name + "师傅");
+                $("#collect-card .driver-info .s-count span").html(result.collect_info.service_times);
+                $("#collect-card .driver-info .c-count").html(result.collect_info.collect_times + "人收藏");
+                $("#collect-card .driver-info .d-years span").html(result.collect_info.driving_years);
+                
+                //当前等级--
+                if(result.level.length == 0){
+                    $("#user_level").remove();
+                }else{
+                    var level_flag_num = result.level_rights.length;
+                    var page = Math.ceil(level_flag_num/4);
+                    var res_flag = result.level_rights;
+                    var itemArray = [];
+                    var wrap = $(".swiper-wrapper");
+                    var contact ="";
+                    var html = "";
+                    var oSpan = "";
+
+                    $(".level-top .user-icon").attr("src",result.head_image);
+                    $(".level-top span").html("—我是"+result.name);
+
+                    $("#level_txt span").html(result.level.name);
+
+                    for (var j = 0; j < level_flag_num; j++) {
+                        if(res_flag[j].have_got){
+                            contact ='<li class="active" flag_id="'+ res_flag[j].level_flag_id +'">'
+                            +'<div class="icon-container icon1-gray">'
+                            +'<img src="'+ res_flag[j].logo +'" alt="'+ res_flag[j].title +'"/>'
+                            +'</div>'
+                            +'<h2>'+ res_flag[j].name +'</h2>'
+                            +'<p>'+ res_flag[j].subtitle +'</p>'
+                            +'</li>';
+                        }else{
+                            contact ='<li flag_id="'+ res_flag[j].level_flag_id +'">'
+                            +'<div class="icon-container icon1-gray">'
+                            +'<img src="'+ res_flag[j].gray_logo +'" alt="'+ res_flag[j].title +'"/>'
+                            +'</div>'
+                            +'<h2>'+ res_flag[j].name +'</h2>'
+                            +'<p>'+ res_flag[j].subtitle +'</p>'
+                            +'</li>';
+                        }
+                            
+                        itemArray.push(contact);
+
+                    }
+                    // console.log(itemArray);
+                    for (var i = 0; i < page; i++) {
+                        var oDiv = "";
+                        oSpan += '<span class="swiper-pagination-bullet"></span>';
+                        for (var n = 0; n < 4; n++) {
+                            // console.log(itemArray[i*4+n])
+
+                            if ((i * 4 + n) < level_flag_num) {
+                                oDiv += itemArray[i * 4 + n];
+                            }
+
+                        }
+                        html += '<div class="swiper-slide">'
+                        + '<ul class="privilege-list">'
+                        + oDiv
+                        + '</ul>'
+                        + '</div>'
+                    }
+
+                    wrap.html(html);
+                    $(".swiper-pagination").html(oSpan);
+                    // console.log(oDiv);
+                    var mySwiper = new Swiper('.swiper-container', {
+                        loop: true,//可选选项，开启循环
+                        pagination: '.swiper-pagination',
+                        paginationClickable: true
+                    });
+
+                    //显示高亮
+                    $(".level-name").html(result.level.name);
+                    $(".level-name-en").html(result.level.en_name);
+                    // $("#growth").html(res.result.user_info.growth_points);
+                    // $("#zaiji_num").html(parseInt(res.result.user_info.next_level_growth_points)-parseInt(res.result.user_info.growth_points));
+                    /*var flag = result.level.level_flag_desc;
+                    var li = $(".swiper-wrapper li");
+                    for (var item in flag) {
+                        var flag_id = flag[item].level_flag_id;
+                        for(var i = 0;i < li.length;i++){
+                            if(li.eq(i).attr("flag_id") == flag_id){
+                                li.eq(i).addClass("active").find("h2").html(flag[item].title).end().find("p").html(flag[item].subtitle).end().find("img").attr("src", flag[item].logo);
+                            }
+                        }
+
+                    };*/
+                    if (result.level.level_id == 4) {
+                     $(".level-points").html("已达到最高等级")
+                   }
+                }
+                    
+
+
+
+
+
+            }else{
+
+            }
+       });
+        //手机验证和ajax
+         var $cellphone=$('#cellphone');
+            $('#submit_btn').click(function(){
+                var value=$cellphone.val().replace(/\s/,'');
+                console.log( /^1\d{10}$/.test(value));
+                if( /^1\d{10}$/.test(value) ) {
+                    var url = '/touch/ajax/reg_from_wx.php';
+                    var data = {
+                        phone  : value
+                    };
+                    $.post(url,data,function(res){
+                        if(res.ret_code=='200'){
+                           // window.location.href = res.jump_url
+                           // console.log(res);
+                           if(res.new_user){
+                                $("#final").show();
+                                $("#share_new").addClass('require-fade');
+                           }else{
+                                $("#final").show();
+                                $("#share_old").addClass('require-fade');
+                           }
+                        }
+                    },'json');
+               }
+                else{
+                   alert('手机号码输入不正确');
+                }
+            });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        var bool = false;
+        var num = 3;
+        var ui_w = 640;
+        var win_h = window.innerHeight,
+                win_w = window.innerWidth;
+        var page_h = Math.round(ui_w/win_w*win_h);
+        //var oBox=document.getElementById('main');
+        var oUl=document.getElementById('scroll');
+        var oLi=oUl.children;
+        oUl.style.height=num*page_h+'px';
+        oUl.style.width=ui_w+'px';
+        for(var i=0;i<num;i++){
+            oLi[i].style.height=page_h+'px';
+            oLi[i].style.width=ui_w+'px';
+        }
+        adaptUILayout.adapt(640); //适配当前页面
+
+
+
+        new hand_slide({container:oUl,children:oLi,direct:'vertical'},function(iNow){
+            var section_id = $('section').eq(iNow).attr('id');
+            console.log(section_id);
+            switch(section_id){
+                case 'cover':
+                        $("#diary").addClass('require-fade');
+                    break;
+                case 'reg_time':
+
+                    Number.prototype.map = function(in_min, in_max, out_min, out_max) {
+                        return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+                    }
+
+                    function rotate(element, degrees) {
+                        element.css({
+                            '-webkit-transform': 'rotate(' + degrees + 'deg)',
+                            '-moz-transform': 'rotate(' + degrees + 'deg)',
+                            '-ms-transform': 'rotate(' + degrees + 'deg)',
+                            'transform': 'rotate(' + degrees + 'deg)'
+                        });
+                    }
+
+                    function setTime() {
+                        var date = new Date();
+                        var mil = date.getMilliseconds();
+                        var sec = date.getSeconds();
+                        var min = date.getMinutes();
+                        var hrs = date.getHours();
+
+                        var mapSec = -(sec.map(0, 59, 0, 360));
+                        var mapMin = -(min.map(0, 59, 0, 360));
+                        var mapHrs = -(hrs.map(0, 11, 0, 360));
+
+                        if (sec == 0) {
+                            $('.seconds-hand').removeClass('smooth');
+                        } else {
+                            $('.seconds-hand').addClass('smooth');
+                        }
+
+                        if (min == 0) {
+                            $('.minute-hand').removeClass('smooth');
+                        } else {
+                            $('.minute-hand').addClass('smooth');
+                        }
+
+                        if (hrs == 0) {
+                            $('.hour-hand').removeClass('smooth');
+                        } else {
+                            $('.hour-hand').addClass('smooth');
+                        }
+
+                        rotate($('.seconds-hand'), mapSec);
+                        rotate($('.minute-hand'), mapMin);
+                        rotate($('.hour-hand'), mapHrs);
+                    }
+
+                    // function calendar(){
+                    //     var c_date = new Date();
+                    //     var year = c_date.getFullYear();
+                    //     var month = c_date.getMonth();
+                    //     var day = c_date.getDate();
+                    //     $("#year").text(year);
+                    //     $("#month").text(month);
+                    //     $("#date").text(day);
+                    // }
+                    // calendar();
+                    function changeTime (time) {
+                        if(!bool){
+                            bool = true;
+                            function timeScroll(resultDate,ele){
+                                this.currentDate = new Date();
+                                this.resultDate = new Date(resultDate);
+                                this.ele = ele;
+                                this.setScroll(this.getYMD(this.currentDate),this.getYMD(this.resultDate));
+                            }
+
+                            timeScroll.prototype.getYMD=function(oDate){
+                                return {
+                                    _Year : oDate.getFullYear(),
+                                    _Month : oDate.getMonth()+1,
+                                    _Date : oDate.getDate()
+                                }
+                            }
+
+                            timeScroll.prototype.setScroll=function(curDate,tarDate){
+                                for(var i in curDate){
+                                    var start = Math.min(curDate[i] , tarDate[i]),
+                                        end  = Math.max(curDate[i] , tarDate[i]),
+                                        step = Math.abs(curDate[i] - tarDate[i]),
+                                        curNum = (curDate[i] < tarDate[i] ? 0 : -1)*step,
+                                        tarNum = (curDate[i] > tarDate[i] ? 0 : -1)*step;
+                                    for(var m=start;m<=end;m++){
+                                        var oLi = document.createElement('li');
+                                        oLi.appendChild(document.createTextNode(m));
+                                        this.ele[i].appendChild(oLi);
+                                    }
+                                    var _this = this;
+
+                                    _this.ele[i].style.WebkitTransform = 'translateY('+curNum*_this.ele[i].children[0].offsetHeight+'px)';
+                                    (function(i,step,_this,tarNum){
+                                        setTimeout(function(){
+                                            _this.ele[i].style.WebkitTransition = '1s all ease';
+                                            _this.ele[i].style.WebkitTransform = 'translateY('+tarNum*_this.ele[i].children[0].offsetHeight+'px)';
+                                        },2000)
+                                    })(i,step,_this,tarNum);
+                                }
+                            }
+
+                            new timeScroll(time,{
+                                _Year  : document.querySelector('#year > ul'),
+                                _Month : document.querySelector('#month > ul'),
+                                _Date  : document.querySelector('#date > ul')
+                            });
+                        }
+                            
+                    }
+
+                    
+
+                    $('#reg_txt').addClass('require-fade');
+                    var interval = setInterval(function() {
+                       setTime();
+                    }, 1);
+
+                    changeTime($(".date-container").attr("time"));
+
+                    clearInterval(interval);
+
+                    break;
+                case 'first_order':
+                    $("#order_img").addClass('require-fade');
+                    $("#order").addClass('require-slide');
+                    break;
+                case 'flight':
+                    //$("#plane_go").addClass('require-go');
+                    //$("#flight_go").addClass('require-fade');
+                    //$("#baggage").addClass('require-slide');
+                    if($(".plane-container").attr("stauts") == 8){
+                        $("#flight_go").addClass('require-fade');
+                        $("#plane_go").addClass('require-back');
+                    }else{
+                        $("#flight_back").addClass('require-fade');
+                        $("#plane_back").addClass('require-back');
+                    }
+                    
+                    $("#back_car").addClass('require-carcome');
+
+                    break;
+                case 'outside':
+                    $("#outside_txt").addClass('require-fade');
+                    $("#car").addClass('require-scale');
+                    $(".city").eq(0).css({"opacity": 1,"top": "158px","left": "-141px","transition": "all 1.8s linear 1.8s"});
+                    $(".city").eq(1).css({"opacity": 1,"top": "62px","left": "324px","transition": "all 1.8s linear 1.8s"});
+                    $(".city").eq(2).css({"opacity": 1,"top": "245px","left": "274px","transition": "all 1.8s linear 1.8s"});
+                    $(".city").eq(3).css({"opacity": 1,"top": "-25px","left": "-65px","transition": "all 1.8s linear 1.8s"});
+                    $(".city").eq(4).css({"opacity": 1,"top": "-85px","left": "100px","transition": "all 1.8s linear 1.8s"});
+                    break;
+                case 'car_brand':
+                    $("#car_count").addClass('require-fade');
+                    break;
+                case 'collect':
+                    $("#collect_txt").addClass('require-fade');
+                    $("#collect-card").addClass('require-slide');
+                    break;
+                case 'user_level':
+                    $("#level_txt").addClass('require-fade');
+                    $("#level-con").addClass('require-slide');
+                    break;
+                case 'share':
+                    $("#share_txt").addClass('require-fade');
+                    $("#join").addClass('require-slide');
+                    break;
+                case 'distance':
+                    $("#distance_txt").addClass("require-fade");
+                    var $total_height = 675;//飞车飞得最长距离
+                    var distance = parseInt($("#distance_txt .num-distance").html());
+                    var range = Math.ceil(distance / 100);
+                    var $height; //飞车轨迹的高度
+
+
+
+                    // 用来根据用户的行驶里程判断飞车距离
+                    if (distance <= 500) {
+                        $height = $total_height * 0.25;
+                    } else if (distance > 500 && distance <= 10000) {
+                        $height = $total_height * 0.65;
+                    } else if (distance > 10000) {
+                        $height = $total_height;
+                    }
+                    var $shelter_height = 675 - $height;
+
+
+                    // $(document).ready(function () {
+
+
+                    $("#rocket").css("-webkit-animation", "rocket-fire 0.1s linear 0.1s 40 alternate");
+                    var interval = setInterval(outerShow(),35);
+                    $("#rocket-shelter").css({"height": $shelter_height, "transition": "all 1.8s linear 1.8s"});
+                    $("#rocket-line").css({"height": $height, "opacity": "1", "transition": "all 1.8s linear 1.8s"});
+
+                    //            行驶距离
+                    function outerShow() {
+                        var i = 0;
+                        function innerShow() {
+                            if (distance > i) {
+                                i = i + range;
+                                if ((distance - i ) < range) {
+                                    i = distance;
+                                    clearInterval(interval);
+                                }
+                            } else { return false; }
+
+                            $("#journey").text();
+                        }
+                        return innerShow;
+                    }
+                    // });
+
+
+                break;
+                /*case 'final':
+                    $("#share_old").addClass('require-fade');
+                    break;*/
+                default:
+                    console.log(iNow);
+                    break;
+            }
+        });
+    },false);
+</script>
+<!--hand_slide 函数-->
+<script>
+    function hand_slide(conf,callback){
+
+        if(typeof(conf) != 'object'){
+            if(typeof(conf) != 'function'){
+                return false;
+            } else {
+                var callback = conf;
+                var conf={};
+            }
+        }
+        var sets={
+            container         : '',             //父容器，必须。
+            children          : '',             //子容器，必须。插件就是对这些子容器进行切换
+            direct            : 'horizontal'    //方向，默认水平方向
+        };
+        for(var i in conf){
+            sets[i]=conf[i];
+        }
+
+        if(sets.direct == 'vertical') {
+            sets.pageXY = 'pageY';
+            sets.translateXY = 'translateY';
+            sets.offsetWH = 'offsetHeight';
+        } else {
+            sets.pageXY = 'pageX';
+            sets.translateXY = 'translateX';
+            sets.offsetWH = 'offsetWidth';
+        }
+
+        var translate=0;
+        var iNow = 0;
+        var hand_slide = this;
+        var oDiv = sets.container;
+        var aDl  = sets.children;
+        var num = aDl.length;
+
+        oDiv.addEventListener('touchstart',function(ev){
+            oDiv.style.WebkitTransition='none';
+            var disXY=ev.targetTouches[0][sets.pageXY]-translate;
+            var downXY=ev.targetTouches[0][sets.pageXY];
+            function fnMove(ev){
+                if(Math.abs(ev.targetTouches[0][sets.pageXY]-downXY)>20){
+                    translate=ev.targetTouches[0][sets.pageXY]-disXY;
+
+                    oDiv.style.WebkitTransform=sets.translateXY+'('+translate+'px)';
+                }
+                ev.preventDefault()
+            }
+
+            function fnEnd(ev){
+                oDiv.removeEventListener('touchmove',fnMove,false);
+                oDiv.removeEventListener('touchend',fnEnd,false);
+
+                if(Math.abs(ev.changedTouches[0][sets.pageXY]-downXY)>20){
+                    if(ev.changedTouches[0][sets.pageXY]<downXY){
+                        iNow++;
+                    }else{
+                        iNow--;
+                    }
+                    if(iNow == 3) {
+//                        setTimeout(function(){
+//                            window.location.href = 'http://www.yongche.com/cms/page/wap/enp-reg.html';
+//                        },100)
+//                        window.location.href = 'http://www.yongche.com/cms/page/wap/enp-reg.html';
+                    }
+                }
+
+
+                if(iNow<0) {
+                    iNow=0;
+                }else if(iNow>num-1) {
+                    iNow=num-1;
+                }
+                translate=-iNow*aDl[0][sets.offsetWH];
+                oDiv.style.WebkitTransition='.4s all ease';
+                oDiv.style.WebkitTransform=sets.translateXY+'('+translate+'px)';
+                //document.title=x;
+            }
+            oDiv.addEventListener('touchmove',fnMove,false);
+            oDiv.addEventListener('touchend',fnEnd,false);
+            if(Math.abs(ev.targetTouches[0][sets.pageXY]-downXY)>20) ev.preventDefault();
+        },false);
+
+        oDiv.addEventListener('webkitTransitionEnd',function(){
+            callback && callback(iNow)
+        },false);
+    }
+</script>
+</body>

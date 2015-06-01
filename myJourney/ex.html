@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=320,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <link rel="stylesheet" href="<{asset:css/app/wap/common.css}>"/>
+    <link rel="stylesheet" href="<{asset:js/app/swiper/swiper3.07.min.css}>"/>
+    <script src="<{asset:js/do/do.all.js}>"></script>
+    <script src="<{asset:js/app/wx/viewport.js}>"></script>
+    <script type="text/javascript">
+        adaptUILayout.adapt(640);
+    </script>
+    <title>易到特权</title>
+    <style>
+        html > body {
+            height: 100%;
+            padding: 0;
+            margin: 0 auto;
+            font-size: 62.5%;
+            font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+            color: #888;
+            overflow-x: hidden;
+            background: #181b25 url('<{asset:u/images/201505/2441905250.png}>') no-repeat;
+            backgound-size: 100% 100%;
+            background-position: 50% 100%;
+        }
+
+        .pull-right { float: right; }
+        .pull-left { float: left; }
+
+        .container {
+            width: 610px;
+            height: 100%;
+            padding: 0 30px 0 0;
+            margin: 0 auto;
+            font-size: 1rem;
+            overflow-x: hidden;
+        }
+
+        .content {
+            width: 610px;
+            margin: 0 auto;
+        }
+
+        .header {
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+        .header a {
+            display: inline-block;
+            height: 45px;
+            line-height: 45px;
+            font-size: 1.4rem;
+            color: #888;
+        }
+
+        .privilege-card {
+            width: 388px;
+            margin-top: 162px;
+            background-color: #f9f9f9;
+            border-radius: 14px;
+        }
+        .card-header {
+            height: 78px;
+            padding-top: 15px;
+            padding-left: 24px;
+            font-size: 1.6rem;
+            color: #343434;
+        }
+        .card-header h2 { font-weight: 100; }
+        .card-banner {
+            height: 111px;
+            padding-top: 35px;
+            padding-left: 24px;
+            font-size: 1.3rem;
+            color: #fff;
+        }
+        .card-banner .growth {
+            margin-right: 10px;
+            vertical-align: -4px;
+            font-size: 3.5rem;
+        }
+        .more-grade {
+            font-size: 1.1rem;
+            color: #bcbebf;
+        }
+        .card-content ,.swiper-container { height: 336px;  }
+        .grade-link {
+            margin-top: 25px;
+            margin-bottom: 252px;
+            text-align: right;
+        }
+        .grade-link a {
+            font-size: 1.1rem;
+            color: #888;
+        }
+        .grade-link .newicon_forward_gray {
+            margin-left: 10px;
+            vertical-align: -9px;
+        }
+
+        .privilege-list {
+            width: 388px;
+            padding-top: 10px;
+        }
+        .privilege-list li {
+            float: left;
+            width: 50%;
+            margin-top: 30px;
+        }
+        .privilege-list li a { color: #d7d7d7;}
+        .privilege-list li a h2 {
+            font-size: 1.1rem;
+            font-weight: 100;
+        }
+        .privilege-list li a p {
+            font-size: 0.8rem;
+        }
+
+        .privilege-list li.active a { color: #4c5070;}
+        .privilege-list li.active a p { color: #7C7C7C; }
+
+        .rocket-container {
+            width: 192px;
+            height: 645px;
+            padding-right: 30px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .rocket-line {
+            position: relative;
+            margin: 0 auto;
+            opacity: 0;
+            height: 0;
+        }
+        .rocket-shelter {
+            position: relative;
+            width: 192px;
+            height: 645px;
+            text-align: center;
+        }
+        .rocket {
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background-image: url('<{asset:u/images/201505/374877473.png}>');
+            background-size: 100% 100%;
+        }
+        @-webkit-keyframes rocket-fire {
+            0% { background-image: url('<{asset:u/images/201505/374877473.png}>'); }
+            100% { background-image: url('<{asset:u/images/201505/2231443916.png}>'); }
+        }
+
+        .begin-date {
+            position: absolute;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+        .begin-date-bottom {
+            right: -30px;
+            bottom: 30px;
+        }
+        .begin-date-top {
+            top: 0;
+            left: 116px;
+        }
+        .distance {
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+
+        .swiper-container {
+            width: 388px;
+            height: 320px;
+        }
+        .swiper-slide {
+            text-align: center;
+            background-color: transparent;
+        }
+        .swiper-pagination-bullet-active { background-color: #b9b9b9; }
+        .swiper-pagination-bullet { background-color: #bbb; }
+        .icon-container {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        .icon-container img {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <a class="pull-left" href=""><img src="<{asset:u/images/201505/2483201205.png}>" alt="back"/></a>
+        <a class="pull-right" href="" style="display:none">分享</a>
+    </header>
+    <article class="content">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <div class="rocket-container">
+                        <div id="rocket-shelter" class="rocket-shelter"><div id="rocket" class="rocket"></div></div>
+                        <div id="rocket-line" class="rocket-line">
+                            <img style="height:100%;width:auto;" src="<{asset:u/images/201505/3585751465.png}>" alt="火箭发射轨迹"/>
+                            <div class="begin-date begin-date-top">
+                                <p class="distance"><span id="journey"></span>km</p>
+                                <p>行驶里程</p>
+                            </div>
+                            <div class="begin-date begin-date-bottom">
+                                <p class="distance" id="time"></p>
+                                <p>起航</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </td>
+                <td>
+                    <div class="privilege-card">
+                        <div class="card-header">
+                            <h2 id="card_name"></h2>
+
+                            <h2 id="card_engname">
+                                <small></small>
+                            </h2>
+                        </div>
+                        <div class="card-banner" id="card-banner" style="background-image: url('<{asset:images/app/user-system/silver.png}>')">
+                            <p><span class="growth" id="growth"></span>成长值</p>
+                            <p class="more-grade">再积<span id="zaiji_num"></span>即可升级为<span id="what_card"></span></p>
+                        </div>
+                        <div class="card-content">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <ul class="privilege-list">
+                                            <li flag_id="1" class="active">
+                                                <a href="">
+                                                    <div class="icon-container"><img src="<{asset:images/app/user-system/privilege.png}>" alt="活动尊享"/></div>
+                                                    <h2>活动尊享</h2>
+                                                    <p>丰富优惠活动</p>
+                                                </a>
+                                            </li>
+                                            <li flag_id="2">
+                                                <a href="">
+                                                    <div class="icon-container"><img src="<{asset:images/app/user-system/CIP-gray.png}>" alt="CIP"/></div>
+                                                    <h2>CIP</h2>
+                                                    <p>机场贵宾通道</p>
+                                                </a>
+                                            </li>
+                                            <li flag_id="4">
+                                                <a href="">
+                                                    <div class="icon-container"><img src="<{asset:images/app/user-system/service-gray.png}>" alt="客服优先"/></div>
+                                                    <h2>客服优先</h2>
+                                                    <p>7*24小时</p>
+                                                </a>
+                                            </li>
+                                            <li flag_id="16">
+                                                <a href="">
+                                                    <div class="icon-container"><img src="<{asset:images/app/user-system/bing-gray.png}>" alt="叫车必应"/></div>
+                                                    <h2>叫车必应</h2>
+                                                    <p>100%响应</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-pagination">
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="grade-link"><a href="/cms/page/grade-rules.html">等级说明<i class="newicon c newicon_forward_gray"></i></a></div>
+
+                </td>
+            </tr>
+
+        </table>
+    </article>
+</div>
+
+
+<script src="<{asset:js/app/swiper/swiper3.07.min.js}>"></script>
+
+<script type="text/javascript">
+    var share_id = '<?=isset($_GET["id"]) ? $_GET["id"] : ""?>';
+    Do('c.common', function () {
+
+        $.getJSON('/ajax/points/user_level.php?id='+share_id, function (res) {
+            var level_flag_num = res.result.level_flag_list.length;
+            var page = Math.ceil(level_flag_num/4);
+            var res_flag = res.result.level_flag_list;
+            var itemArray = [];
+            var wrap = $(".swiper-wrapper");
+            var contact ="";
+            var html = "";
+            var oSpan = "";
+            for (var j = 0; j < level_flag_num; j++) {
+                contact ='<li flag_id="'+ res_flag[j].level_flag_id +'">'
+                +'<a href="/cms/page/privilege-intro.html#'+ res_flag[j].level_flag_id +'">'
+                +'<div class="icon-container icon1-gray">'
+                +'<img src="'+ res_flag[j].gray_logo +'" alt="'+ res_flag[j].title +'"/>'
+                +'</div>'
+                +'<h2>'+ res_flag[j].name +'</h2>'
+                +'<p>'+ res_flag[j].subtitle +'</p>'
+                +'</a>'
+                +'</li>';
+                itemArray.push(contact);
+
+            }
+            // console.log(itemArray);
+            for (var i = 0; i < page; i++) {
+                var oDiv = "";
+                oSpan += '<span class="swiper-pagination-bullet"></span>';
+                for (var n = 0; n < 4; n++) {
+                    // console.log(itemArray[i*4+n])
+
+                    if ((i * 4 + n) < level_flag_num) {
+                        oDiv += itemArray[i * 4 + n];
+                    }
+
+                }
+                html += '<div class="swiper-slide">'
+                + '<ul class="privilege-list">'
+                + oDiv
+                + '</ul>'
+                + '</div>'
+            }
+
+            wrap.html(html);
+            $(".swiper-pagination").html(oSpan);
+            // console.log(oDiv);
+            var mySwiper = new Swiper('.swiper-container', {
+                loop: true,//可选选项，开启循环
+                pagination: '.swiper-pagination',
+                paginationClickable: true
+            });
+            $("#card_name").html(res.result.level.name);
+            $("#card_engname").html(res.result.level.en_name);
+            $("#growth").html(res.result.user_info.growth_points);
+            $("#zaiji_num").html(parseInt(res.result.user_info.next_level_growth_points)-parseInt(res.result.user_info.growth_points));
+            $("#what_card").html(res.result.next_level.name);
+            $("#card-banner").css("background", "url(" + res.result.level.bg_image + ")");
+            $("#journey").html(res.result.total_km);
+            $("#time").html(res.result.active_time);
+            var flag = res.result.level.level_flag_desc;
+            var li = $(".swiper-wrapper li");
+            // console.log(li.length);
+            for (var item in flag) {
+                var flag_id = flag[item].level_flag_id;
+                for(var i = 0;i < li.length;i++){
+                    if(li.eq(i).attr("flag_id") == flag_id){
+                        li.eq(i).addClass("active").find("h2").html(flag[item].title).end().find("p").html(flag[item].subtitle).end().find("img").attr("src", flag[item].logo);
+                    }
+                }
+
+            }
+            ;
+            if (res.result.level.level_id == 4) {
+                $(".more-grade").html("已达到最高等级")
+            }
+
+            var $total_height = 675;//飞车飞得最长距离
+            var distance = res.result.total_km;
+            var range = Math.ceil(distance / 100);
+            var $height; //飞车轨迹的高度
+
+
+
+            // 用来根据用户的行驶里程判断飞车距离
+            if (distance <= 500) {
+                $height = $total_height * 0.25;
+            } else if (distance > 500 && distance <= 10000) {
+                $height = $total_height * 0.65;
+            } else if (distance > 10000) {
+                $height = $total_height;
+            }
+            var $shelter_height = 675 - $height;
+
+
+            // $(document).ready(function () {
+
+
+            $("#rocket").css("-webkit-animation", "rocket-fire 0.1s linear 0.1s 40 alternate");
+            var interval = setInterval(outerShow(),35);
+            $("#rocket-shelter").css({"height": $shelter_height, "transition": "all 1.8s linear 1.8s"});
+            $("#rocket-line").css({"height": $height, "opacity": "1", "transition": "all 1.8s linear 1.8s"});
+
+            //            行驶距离
+            function outerShow() {
+                var i = 0;
+                function innerShow() {
+                    if (distance > i) {
+                        i = i + range;
+                        if ((distance - i ) < range) {
+                            i = distance;
+                            clearInterval(interval);
+                        }
+                    } else { return false; }
+
+                    $("#journey").text(i);
+                }
+                return innerShow;
+            }
+            // });
+        });
+
+
+
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+/* this part is for variables */
+/* this part is for some functions */
+/*
+ * This stylesheet is for yidao-enterprise-service
+ */
+/*---------------------------------------------------------------------
+ *---------------------------------------------------------------------
+ * Gerneral Classes
+ *---------------------------------------------------------------------
+ *----------------------------------------------------------------------*/
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  background-color: #f0f0f0;
+}
+/*---------------------------------------------------------------------
+ *---------------------------------------------------------------------
+ * Help Classes
+ *---------------------------------------------------------------------
+ *----------------------------------------------------------------------*/
+.mt30 {
+  margin-top: 30px;
+}
+.mt55 {
+  margin-top: 55px;
+}
+.mb30 {
+  margin-bottom: 30px;
+}
+.gray {
+  color: #888888;
+}
+.wx-invisible {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+/*---------------------------------------------------------------------
+ *---------------------------------------------------------------------
+ * Components Classes
+ *---------------------------------------------------------------------
+ *----------------------------------------------------------------------*/
+.container {
+  font-size: 1.6rem;
+}
+.header {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  background-color: #ec4949;
+}
+.warning {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  background-color: #ec4949;
+  color: #ec4949;
+  background-color: #f9f594;
+}
+.btn {
+  font-size: inherit;
+  font-family: inherit;
+  text-align: center;
+  border-radius: 0;
+  border: none;
+}
+.btn-red {
+  background-color: #ec4949;
+  color: #fff;
+}
+.btn-disabled {
+  background-color: #a4a4a4;
+  color: #fff;
+}
+.btn-invisible {
+  background-color: transparent;
+}
+.btn-large {
+  height: 55px;
+  line-height: 55px;
+  width: 100%;
+}
+.btn-xs {
+  height: 39px;
+  line-height: 39px;
+  padding: 0 10px;
+}
+.btn-container {
+  margin: 55px 16px;
+  padding-bottom: 30px;
+}
+.window-container {
+  position: absolute;
+  z-index: 5001;
+  width: 80%;
+  display: none;
+}
+.window-container .window-img {
+  width: 80%;
+  margin-top: 40px;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10%;
+  font-size: 2rem;
+  color: #fff;
+}
+/*---------------------------------------------------------------------
+ *---------------------------------------------------------------------
+ * Pages Classes
+ *---------------------------------------------------------------------
+ *----------------------------------------------------------------------*/
+.logo-container {
+  min-height: 75px;
+  padding-top: 35px;
+  text-align: center;
+}
+.logo-container h2 {
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  letter-spacing: 0.2rem;
+}
+.logo-container p {
+  font-size: 1.6rem;
+}
+.info-list {
+  background-color: #fff;
+}
+.info-list li {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  height: 55px;
+  line-height: 55px;
+  padding-left: 0;
+  padding-right: 10px;
+  border-bottom: 1px solid #dcdcdc;
+}
+.info-list li:first-child {
+  border-top: 1px solid #dcdcdc;
+}
+.info-list li label {
+  display: block;
+  width: 84px;
+  margin-right: 20px;
+  color: #888888;
+  text-align: right;
+}
+.info-list li input[type="text"],
+.info-list li input[type="tel"] {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  display: block;
+  height: 25px;
+  padding: 10px;
+  border: none;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background: none;
+  outline: none;
+  line-height: normal;
+  vertical-align: middle;
+}
+.upload-list li {
+  margin-bottom: 25px;
+  background-color: #fff;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
+.upload-list li .upload-title {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  height: 55px;
+  line-height: 55px;
+  padding-left: 16px;
+  padding-right: 10px;
+  border-bottom: 1px solid #dcdcdc;
+}
+.upload-list li .upload-title h2 {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  font-size: 2rem;
+}
+.upload-list li .upload-title a {
+  color: #888888;
+}
+.upload-list li .upload-area {
+  position: relative;
+  padding: 10px 0 25px;
+  text-align: center;
+}
+.upload-list li .upload-area input[type="button"] {
+  margin-top: -1.5rem;
+}
+.upload-list li .upload-area .reupload {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 3rem;
+  line-height: 3rem;
+  width: 10rem;
+  color: #fff;
+  background-color: #ec4949;
+}

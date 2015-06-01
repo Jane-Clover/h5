@@ -1,0 +1,235 @@
+/* this part is for variables */
+@red : #ec4949;
+@bg-gray: #f0f0f0;
+@border-gray: #dcdcdc;
+@gray: #888;
+
+@input-height: 55px;
+
+
+
+/* this part is for some functions */
+
+.v-middle(@height) {
+  height: @height;
+  line-height: @height;
+}
+
+/*
+ * This stylesheet is for yidao-enterprise-service
+ */
+/*---------------------------------------------------------------------
+ *---------------------------------------------------------------------
+ * Gerneral Classes
+ *---------------------------------------------------------------------
+ *----------------------------------------------------------------------*/
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  background-color: @bg-gray;
+}
+
+/*---------------------------------------------------------------------
+ *---------------------------------------------------------------------
+ * Help Classes
+ *---------------------------------------------------------------------
+ *----------------------------------------------------------------------*/
+.mt30 { margin-top: 30px; }
+.mt55 { margin-top: 55px; }
+.mb30 { margin-bottom: 30px; }
+
+.gray { color: @gray; }
+
+.wx-invisible {
+  position:absolute;
+  opacity:0;
+  height: 0;
+  width:0;
+}
+/*---------------------------------------------------------------------
+ *---------------------------------------------------------------------
+ * Components Classes
+ *---------------------------------------------------------------------
+ *----------------------------------------------------------------------*/
+.container { font-size: 1.6rem; }
+.header {
+  width: 100%;
+  .v-middle(50px);
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  background-color: @red;
+}
+
+.warning {
+  .header;
+  color: @red;
+  background-color: #f9f594;
+}
+
+.btn {
+  font-size: inherit;
+  font-family: inherit;
+  text-align: center;
+  border-radius: 0;
+  border: none;
+}
+
+.btn-red {
+  background-color: @red;
+  color: #fff;
+}
+
+.btn-disabled {
+  background-color: #a4a4a4;
+  color: #fff;
+}
+
+.btn-invisible {
+  background-color: transparent;
+}
+
+.btn-large {
+  .v-middle(@input-height);
+  width: 100%;
+}
+
+.btn-xs {
+  .v-middle(@input-height - 16);
+  padding: 0 10px;
+}
+
+.btn-container {
+  margin: 55px 16px;
+  padding-bottom: 30px;
+}
+
+.window-container {
+  position: absolute;
+  z-index: 5001;
+  width: 80%;
+  display: none;
+
+  .window-img {
+    width: 80%;
+    margin-top: 40px;
+
+  }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10%;
+  font-size: 2rem;
+  color: #fff;
+}
+/*---------------------------------------------------------------------
+ *---------------------------------------------------------------------
+ * Pages Classes
+ *---------------------------------------------------------------------
+ *----------------------------------------------------------------------*/
+.logo-container {
+  min-height: 75px;
+  padding-top: 35px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    letter-spacing: 0.2rem;
+  }
+  p { font-size: 1.6rem; }
+}
+
+.info-list{
+  background-color: #fff;
+  li {
+    display: -webkit-box;
+    display: box;
+    -webkit-box-align: center;
+    box-align: center;
+    .v-middle(@input-height);
+    padding-left: 0;
+    padding-right: 10px;
+    border-bottom: 1px solid #dcdcdc;
+    &:first-child {
+      border-top: 1px solid @border-gray;
+    }
+    label {
+      display: block;
+      width: 84px;
+      margin-right: 20px;
+      color: @gray;
+      text-align: right;
+    }
+
+    input[type="text"],input[type="tel"] {
+      -webkit-box-flex: 1;
+      box-flex: 1;
+      display: block;
+      height: @input-height - 30;
+      padding: 10px;
+      border: none;
+      box-sizing: border-box;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      background: none;
+      outline: none;
+      line-height: normal;
+      vertical-align: middle;
+    }
+  }
+}
+
+.upload-list li {
+  margin-bottom: 25px;
+  background-color: #fff;
+  border-top: 1px solid @border-gray;
+  border-bottom: 1px solid @border-gray;
+
+  .upload-title {
+    display: -webkit-box;
+    display: box;
+    -webkit-box-align: center;
+    box-align: center;
+    .v-middle(@input-height);
+    padding-left: 16px;
+    padding-right: 10px;
+    border-bottom: 1px solid #dcdcdc;
+    h2 {
+      -webkit-box-flex: 1;
+      box-flex: 1;
+      font-size: 2rem;
+    }
+    a {
+      color: @gray;
+    }
+  }
+
+  .upload-area {
+    position: relative;
+    padding: 10px 0 25px;
+    text-align: center;
+    input[type="button"] {
+      margin-top: -1.5rem;
+    }
+    .reupload {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      .v-middle(3rem);
+      width: 10rem;
+      color: #fff;
+      background-color: @red;
+    }
+  }
+
+}

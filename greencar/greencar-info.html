@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script type="text/javascript">
+        var Do=function(){Do.actions.push([].slice.call(arguments));};
+            Do.ready=function(){Do.actions.push([].slice.call(arguments));};
+            Do.add=Do.define=function(name,opts){Do.mods[name]=opts;};
+            Do.global=function(){Do.global.mods=Array.prototype.concat(Do.global.mods,[].slice.call(arguments));};
+            Do.global.mods=[];
+            Do.mods={};Do.actions=[];
+    </script>
+    <meta charset="UTF-8">
+    <meta content="width=320,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta name="format-detection" content="telephone=no">  <!--自动检测在网页中可能出现的电话号码-->
+    <title>司机加盟</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/greencar-reg.css"/>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>司机及车辆信息</h1>
+    </header>
+    <div class="warning hide">
+        <p>审核未通过，原因:  <span>驾照照片不清晰</span></p>
+    </div>
+    <form id="j_form">
+        <section class="content">
+            <ul class="info-list">
+                <li class="">
+                    <label for="realname">真实姓名</label>
+                    <input id="realname" name="realname" required type="text" placeholder=""/>
+                </li>
+                <li>
+                    <label for="gender">性别</label>
+                    <select name="gender" class="undis" id="gender">
+                        <option value="male">男</option>
+                        <option value="female">女</option>
+                    </select>
+                    <img class="scale-6" src="img/down.png" alt="请选择"/>
+                </li>
+            </ul>
+        </section>
+
+
+        <section class="content mt55">
+            <ul class="info-list">
+                <li>
+                    <label for="">车辆品牌</label>
+                    <input type="text" value="" name="expire_date" id="expire_date" autocomplete="off" readonly="readonly"/>
+                    <img class="scale-6" src="img/down.png" alt="请选择"/>
+                </li>
+                <li>
+                    <label for="">车型</label>
+                    <input type="text"/>
+                    <img class="scale-6" src="img/down.png" alt="请选择"/>
+                </li>
+                <li>
+                    <label for="">车辆颜色</label>
+                    <input type="text"/>
+                    <img class="scale-6" src="img/down.png" alt="请选择"/>
+                </li>
+                <li>
+                    <label for="">车牌号</label>
+                    <input type="text"/>
+                    <img class="scale-6" src="img/down.png" alt="请选择"/>
+                </li>
+            </ul>
+        </section>
+
+
+        <section class="content mt55">
+            <ul class="info-list">
+                <li>
+                    <label for="">身份证号</label>
+                    <input type="text" pattern="/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/" placeholder=""/>
+                </li>
+                <li>
+                    <label for="">驾驶证编号</label>
+                    <input type="text" placeholder=""/>
+                </li>
+            </ul>
+        </section>
+
+        <div class="btn-container">
+            <input class="btn btn-red btn-large" id="submit_btn" type="button" value="继续"/>
+        </div>
+    </form>
+
+
+</div>
+<script type="text/javascript" src="http://i3.yongche.name/js/do/do.all.js"></script>
+<script>
+    Do('j.mobiscroll_new', function(){
+        var $select = $('#gender');
+        $select.mobiscroll().select({
+            theme: 'ios7',
+            inputClass: 'newtxt block w100per border_box',
+            display: 'bottom',
+            mode: 'scroller',
+            dateOrder: 'mm',
+            dateFormat: "mm",
+            timeFormat: '',
+            timeWheels: '',
+            setText: "确定",
+            cancelText: "取消"
+        });
+    });
+
+    Do('userload','j.html5Validate',function(){
+        var $realname = $('#realname'),
+            $submit_btn = $('#submit_btn');
+        window._Domain = 'http://dujingjie.yongche.org/test/greencar';
+        //发送验证码
+        $submit_btn.click(function(){
+            if($.html5Validate.isAllpass($cellphone)){
+                window.send_corporate_sms();
+            }
+        });
+
+        $('#j_form').html5Validate(function(){
+
+            window.CHECK_CORPORATE_SMS(
+                    {
+                        cellphone : document.querySelector('#realname').value
+                    },
+                    function(res){
+                        if(res.code != 200) {
+                            $verify_code.testRemind(res.msg);
+                        } else {
+                            $.ajax({
+                                type:'get',
+                                cache:false,
+                                url:window._Domain + '/ajax/register',
+                                data:$('j_form').serializeArray(),
+                                dataType: 'JSONP',
+                                success: function(data){
+                                    if(data.ret_code == 200){
+                                        window.location.href = '/greencar-info.html';
+                                    } else {
+                                        alert(data.ret_msg);
+                                    }
+
+                                }
+
+                            });
+
+                        }
+                    }
+            );
+            return false;
+        });
+
+
+    });
+</script>
+</body>
+</html>
